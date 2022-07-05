@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Xato Auth Signup 3 | Xato - Multipurpose Bootstrap Admin Dashboard Template</title>
+    <link rel="icon" type="image/x-icon" href="../public/master/assets/img/favicon.ico"/>
+    <!-- Common Styles Starts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="../public/master/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../public/master/assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../public/master/assets/css/structure.css" rel="stylesheet" type="text/css" />
+    <link href="../public/master/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="../public/master/plugins/highlight/styles/monokai-sublime.css" rel="stylesheet" type="text/css" />
+    <!-- Common Styles Ends -->
+    <!-- Common Icon Starts -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Common Icon Ends -->
+    <!-- Page Level Plugin/Style Starts -->
+    <link href="../public/master/assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href="../public/master/assets/css/authentication/auth_3.css" rel="stylesheet" type="text/css">
+    <!-- Page Level Plugin/Style Ends -->
+</head>
+<body class="login-three" onload="Captcha();">
+    <!-- Loader Starts -->
+    <div id="load_screen">
+        <div class="boxes">
+            <div class="box">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            <div class="box">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            <div class="box">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            <div class="box">
+                <div></div><div></div><div></div><div></div>
+            </div>
+        </div>
+        <!-- <p class="xato-loader-heading">Xato</p> -->
+    </div>
+    <!--  Loader Ends -->
+    <!-- Main Body Starts -->
+    <div class="container-fluid login-three-container">
+        <div class="row main-login-three">
+            <div class="col-xl-3 col-lg-3 col-md-2 d-none d-md-block p-0">
+                <div class="login-bg"></div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4">
+                <div class="d-flex flex-column justify-content-between h-100 center-area">
+                    <a>Sign up</a>
+                    <div>
+                        <p class="text-dark">A few clicks away from creating your account</p>
+                        <h2 class="text-black">Fill up and create an account</h2>
+                    </div>
+                    <p class="text-dark d-none d-md-block m-0">Social Network</p>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-6">
+                <div class="d-flex flex-column justify-content-between h-100 right-area">
+                    <a class="btn btn-sm w-25 bg-gradient-primary text-white ml-auto"  href="auth_login_3.html">Login</a>
+                    <div>
+                        <div class="login-three-inputs mt-3">
+                            <input type="email" placeholder="Email">
+                            <i class="las la-envelope"></i>
+                        </div>
+                        <div class="login-three-inputs mt-3">
+                            <input type="password" placeholder="Password">
+                            <i class="las la-lock"></i>
+                        </div>
+                        <div class="capt mt-3">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="captcha">
+                                    <h2 type="text" id="mainCaptcha"></h2>
+                                </div>
+                                <a class="text-primary font-25 ml-3 pointer" title="Change Captcha">
+                                    <i class="las la-sync-alt" id="refresh" onclick="Captcha();"></i>
+                                </a>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt-3">
+                                <div class="login-three-inputs mr-3">
+                                    <input type="text" id="txtInputCaptcha" placeholder="Enter Captcha"/>
+                                    <i class="las la-robot"></i>
+                                </div>
+                                <input class="btn btn-sm btn-primary" id="Button1" type="button" value="Check" onclick="ValidCaptcha();"/>
+                                <i class="lar la-check-circle captcha-check text-success-teal font-25 " id="checkMark"></i>
+                            </div>
+                        </div>
+                        <div class="login-three-inputs check mt-4">
+                            <input class="inp-cbx" id="cbx" type="checkbox" style="display: none">
+                            <label class="cbx" for="cbx">
+                                <span>
+                                    <svg width="12px" height="10px" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="font-13 text-muted">I agree to the terms and policies</span>
+                            </label>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-4">
+                            <button class="text-white btn bg-gradient-primary">Sign up</button>
+                        </div>
+                    </div>
+                    <div class="login-three-social social-logins mt-4">
+                        <div class="social-btn bg-gradient-primary">
+                            <a href="#" class="fb-btn">
+                                <i class="lab la-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="social-btn bg-gradient-primary">
+                            <a href="#" class="twitter-btn">
+                                <i class="lab la-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="social-btn bg-gradient-primary">
+                            <a href="#" class="google-btn">
+                                <i class="lab la-google-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Body Ends -->
+    <!-- Page Level Plugin/Script Starts -->
+    <script src="../public/master/assets/js/loader.js"></script>
+    <script src="../public/master/assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="../public/master/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../public/master/assets/js/authentication/auth_2.js"></script>
+    <!-- Page Level Plugin/Script Ends -->
+</body>
+</html>
